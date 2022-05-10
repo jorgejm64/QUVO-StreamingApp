@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-image: linear-gradient(
+    250deg,
+    #28003c,
+    #1f003b,
+    #110123,
+    #3a0032,
+    #28003c
+  );
+  background-size: 600%;
+  background-position: 0 0;
+  box-shadow: inset 0 0 5em rgba(0, 0, 0, 0.5);
+  height: 100%;
+
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: gradients;
+}
+
+.dataList {
+  background: #24242478;
+}
+
+.MuiTablePagination-root {
+  color: white !important;
+}
+
+@keyframes gradients {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  60% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 30%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+.container {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.MuiDataGrid-root {
+  color: white !important;
+  border: 1px solid #4a4a4a !important;
+  max-height: 631px;
+}
+
+span.MuiIconButton-label {
+  color: #fff !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnsContainer {
+  border-bottom: 1px solid rgb(71 71 71) !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  border-bottom: 1px solid rgb(71 71 71) !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(71 71 71);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9e86ff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7160b3; 
+}
+
+input {
+  color: white;
+}
+
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+a {
+  text-decoration: none;
+}

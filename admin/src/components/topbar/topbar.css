@@ -1,0 +1,108 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 999;
+  background-color: #25222b00;
+  position: sticky;
+  backdrop-filter: blur(2px);
+  border-bottom: 1px solid #222226;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    position: absolute;
+    width: 120px;
+    top: 20px;
+    left: -80px;
+    background: white;
+    padding: 3px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.options > span > svg {
+    width: 15px;
+    margin-right: 4px;
+}
+
+.options > span {
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    transition: color .3s ease;
+}
+
+.options > span:hover {
+  color: rgb(85, 85, 85);
+}
+
+.profile:hover > svg {
+    transform: rotateZ(0deg);
+}
+
+.profile:hover > .options {
+    visibility: visible;
+    opacity: 1;
+    top: 45px;
+}
+
+.profile {
+    position: relative;
+}
+.topbarWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.topRight{
+    display: flex;
+    align-items: center;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #9e86ff;
+}
+
+.topIconBadge{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.topAvatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

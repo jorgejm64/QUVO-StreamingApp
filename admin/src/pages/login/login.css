@@ -1,0 +1,290 @@
+.Auth__logo {
+  display: none;
+}
+@media (min-width: 400px) {
+  .Auth__logo {
+    display: block;
+    width: 100%;
+    z-index: 2;
+    padding: 0.5em;
+    background: #000;
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+    text-align: center;
+ }
+  .Auth__logo--img {
+    width: 100%;
+    max-width: 120px;
+ }
+}
+.Auth__svg {
+  width: 600px;
+  height: 670px;
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.Auth__svg svg {
+  fill: none;
+  stroke: #70f 61;
+  stroke-miterlimit: 10;
+  stroke-width: 1px;
+  animation-name: girus;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes girus {
+  0% {
+    transform: rotate3d(1, 1, 1, 1deg);
+ }
+  100% {
+    transform: rotate3d(1, 1, 1, 359deg);
+ }
+  0% {
+    transform: rotate3d(1, 1, 1, 1deg);
+ }
+}
+.Auth__content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  max-width: 90%;
+  padding: 2em 1.8em;
+}
+@media (min-width: 400px) {
+  .Auth__content {
+    padding: 2.25em 2em;
+ }
+}
+@media (min-width: 640px) {
+  .Auth__content {
+    padding: 3.75em 3em;
+ }
+}
+@media (min-width: 768px) {
+  .Auth__content {
+    max-width: 500px;
+ }
+}
+.Auth__content--title {
+  font-family: "Gilroy", sans-serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  color: white;
+}
+@media (min-width: 400px) {
+  .Auth__content--title {
+    font-size: 2rem;
+ }
+}
+.Auth__content--goBack a {
+  display: flex;
+  font-size: 16px;
+  margin-top: 20px;
+  height: 31px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #fff;
+  text-decoration: none;
+}
+.Auth__content--goBack a svg {
+  width: 30px;
+  height: 30px;
+}
+.Auth__content--toggleView {
+  margin-top: 20px;
+  display: inherit;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+}
+.Auth__content--toggleView .toggler {
+  display: inline-block;
+  color: #bac7ff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.Auth__content--toggleView .toggler:hover {
+  color: #a1b2ff;
+  transform: scale(0.95);
+}
+@media (min-width: 768px) {
+  .Auth__content--toggleView .toggler {
+    font-size: 16px;
+ }
+}
+@media (min-width: 768px) {
+  .Auth__content--toggleView {
+    font-size: 16px;
+ }
+}
+.Auth__content--disclaimer {
+  display: inherit;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.Auth__content--errors {
+  display: inherit;
+  margin-top: 1.5em;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #9e86ff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .Auth__content--errors {
+    font-size: 16px;
+ }
+}
+.SignIn__form--inputwrp {
+  margin: 0.6em 0;
+}
+@media (min-width: 400px) {
+  .SignIn__form--inputwrp {
+    margin: 1em 0;
+ }
+}
+.SignIn__form--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  height: 45px;
+  box-shadow: none;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  padding: 1.2em 0.8em;
+  margin-top: 0.5em;
+  border-radius: 40px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+.SignIn__form--button:focus {
+  outline: none;
+}
+.SignIn__form--button:nth-of-type(1) {
+  margin-top: 1.5em;
+}
+@media (min-width: 400px) {
+  .SignIn__form--button:nth-of-type(1) {
+    margin-top: 2em;
+ }
+}
+@media (min-width: 400px) {
+  .SignIn__form--button {
+    font-size: 15px;
+ }
+}
+.SignIn__form--button.button__submit {
+  background-color: #70f;
+  color: #fff;
+}
+.SignIn__form--button.button__submit:hover {
+  background-color: #6400d6;
+  box-shadow: #000 0px 0px 20px 7px;
+  transform: scale(0.95);
+}
+.SignIn__form--inputwrp {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 2em;
+}
+.SignIn__form--inputwrp label {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ccc;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.SignIn__form--inputwrp input:focus ~ label, .SignIn__form--inputwrp input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #999;
+  font-size: 14px;
+}
+.SignIn__form--inputwrp input:focus {
+  border-bottom: 1px solid #70f;
+}
+.SignIn__form--inputwrp .input--error {
+  display: block;
+  color: #9e86ff;
+  margin-top: 10px;
+}
+.SignIn__form--inputwrp .inputField {
+  width: 100%;
+  padding: 1em 0;
+  background-color: transparent;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  transition: all 0.2s ease-out;
+}
+.SignIn__form--inputwrp .inputField__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.SignIn__form--inputwrp .inputField:disabled {
+  background-color: #1f1f1f;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+
+.Auth__loader {
+  height: 30px;
+  width: 30px;
+}
+
+.Auth__loader > .Loader {
+  width: 30px !important;
+  height: 30px !important;
+  background: linear-gradient( 0deg, rgba(119, 0, 255, 0.2) 33%, rgb(255 255 255) 100% ) !important;
+}
+
+.Auth__loader > .Loader::after {
+  background: #7700ff !important;
+}
