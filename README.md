@@ -13,6 +13,8 @@ Nodemailer nos permitirá enviar correos a los usuarios como por ejemplo recuper
 
 Cabe destacar que para su uso en local no se pueden pasar las películas y series una por cuestiones de copyright y otra porque ocupan. Para ello he preparado una carpeta en drive donde puedes descargar los tráiler. Estos se descomprimen dentro de la carpeta api directamente. Y reemplazamos todo. Así de esta manera al faltar las películas cuando intentes ver por ejemplo Batman no va a funcionar, pero los trailer siempre van a funcionar. 
 
+https://drive.google.com/file/d/1sHwB7IN3JJuF7jGJqpbClkD3HAROERrH/view?usp=sharing
+
 Requisitos para la instalación:
 	-NodeJs (La versión donde se ha programado es la 16.14.0).
 	-Editor de código fuente, recomendado Visual studio code.
