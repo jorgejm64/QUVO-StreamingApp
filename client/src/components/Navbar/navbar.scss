@@ -1,0 +1,244 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.Navbar {
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+  background-image: linear-gradient(to bottom, rgb(0 0 0 / 69%) 0%, rgb(0 0 0 / 0%));
+  transition: all 0.2s ease-out;
+
+  @include mq("md") {
+    padding: 0 1vw;
+  }
+
+  .Sidebar__content {
+    width: fit-content;
+
+    @include mq("md") {
+      width: 40%;
+    }
+  }
+
+  &__fixed {
+    background-image: none;
+    background-color: #00000089;
+    backdrop-filter: blur(3px);
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 58%);
+  }
+
+  &__minilogo {
+    width: 32px !important;
+    height: 31px !important;
+    margin-left: 6px;
+    text-align: center;
+  }
+
+  &__logo {
+    width: 20%;
+    text-align: center;
+    height: 30px;
+
+    img {
+      max-width: 110px;
+      width: 100%;
+    }
+  }
+
+  &__primarynav {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @include mq("md") {
+      margin: 0 13px;
+    }
+  }
+
+  &__navlinks {
+    margin-left: 2rem;
+
+    &--link {
+      display: inline-block;
+      margin: 0 12px;
+      font-size: 14px;
+
+      @include mq("sm") {
+        font-size: 16px;
+      }
+      @include mq("md") {
+        font-size: 1.6vw;
+      }
+      @include mq("lg") {
+        font-size: 1.2vw;
+      }
+      @include mq(1330px) {
+        font-size: 18px;
+      }
+
+      a {
+        color: #e5e5e5;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 400;
+        will-change: font-weight;
+        transition: color 0.2s ease-in-out;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        svg {
+          margin-right: 5px;
+        }
+        &:hover {
+          color: #b3b3b3;
+        }
+      }
+
+      .activeNavLink {
+        color: $white;
+        font-weight: 700;
+        cursor: default;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__navitem {
+    margin: 0 3px;
+
+    @include mq("md") {
+      margin: 0 13px;
+    }
+  }
+
+  &__primarynav {
+    margin-left: auto;
+  }
+
+  &__notifications {
+    position: relative;
+    display: none;
+
+    @include mq("md") {
+      display: block !important;
+    }
+    
+
+    &--number {
+      position: absolute;
+      top: -2px;
+      right: 1px;
+      font-size: 8px;
+      width: 12px;
+      display: flex;
+      height: 12px;
+      background: $light-purple;
+      border: 1px solid #fff;
+      color: white;
+      align-items: center;
+      border-radius: 50%;
+      justify-content: center;
+    }
+  }
+
+  &__navprofile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      .Navbar__navprofile--caret {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--avatar {
+      width: 32px;
+      height: 32px;
+      margin-right: 0;
+      border-radius: 50%;
+
+      @include mq("md") {
+        margin-right: 8px !important;
+      }
+    }
+
+    &--name {
+      font-size: 13px;
+      color: #ffffffd4;
+      display: none;
+      max-width: 50px;
+      overflow: hidden;
+      text-transform: capitalize;
+
+      @include mq("md") {
+        display: block;
+      }
+    }
+
+    &--caret {
+      transition: transform 0.2s ease-out;
+    }
+
+    &--content {
+      display: block;
+      pointer-events: none;
+      position: absolute;
+      opacity: 0;
+      top: 100px;
+      right: 0;
+      padding: 5px 0;
+      white-space: nowrap;
+      border-radius: 10px;
+      background-color: rgb(255 255 255 / 88%);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      transition: all 0.2s ease-out;
+
+      @include mq(sm) {
+        min-width: 150px;
+      }
+
+      &.active {
+        opacity: 1;
+        top: 42px;
+        pointer-events: all;
+      }
+
+      li {
+        color: black;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.1s linear;
+
+        &:hover {
+          transform: scale(0.96);
+        }
+
+        a {
+          display: block;
+          color: black;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

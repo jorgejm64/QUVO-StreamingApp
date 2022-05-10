@@ -1,0 +1,221 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.Banner {
+  font-family: $main-font;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  height: 500px;
+  background: $black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+
+  @include mq(lg) {
+    height: 700px;
+    align-items: center;
+  }
+
+  &__loadsection {
+    .loading,
+    .errored {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      background: $black;
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba($color: $black, $alpha: 0.45);
+    }
+  }
+
+  &__video {
+    position: fixed;
+    top: -20vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 190%;
+    height: 100%;
+    display: none;
+
+    @include mq("md") {
+      display: block !important;
+    }
+  }
+
+  &__content {
+    width: fit-content;
+    display: flex;
+    max-width: 520px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+    z-index: 1;
+
+    &--duration {
+      font-size: 13px;
+    }
+
+    &--info {
+      margin: 11px 0;
+      font-size: 13px;
+    }
+
+    &--genres {
+      margin-left: 20px;
+    }
+
+    @include mq(lg) {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &--title {
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 300;
+      text-shadow: 2px 2px 7px rgb(0 0 0 / 77%);
+
+      @include mq("xs") {
+        font-size: 25px;
+      }
+
+      @include mq("sm") {
+        font-size: 30px;
+      }
+
+      @include mq("md") {
+        font-size: 45px;
+      }
+    }
+
+    &--description {
+      font-size: 14px;
+      line-height: 1.6;
+      text-shadow: 2px 2px 4px rgba($color: $black, $alpha: 0.45);
+      margin-top: 1rem;
+
+      @include mq("sm") {
+        font-size: 16px;
+      }
+
+      @include mq("md") {
+        max-width: 60vw;
+      }
+
+      @include mq("lg") {
+        font-size: 15px;
+        max-width: 30vw;
+        margin-top: 1vw;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 1vw;
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(0 0 0 / 68%);
+    color: #f2f2f2;
+    padding: 10px 16px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 0;
+    margin-top: 1em;
+    font-family: $main-font;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+
+    @include mq("xs") {
+      font-size: 14px;
+    }
+
+    @include mq("md") {
+      font-size: 15px;
+    }
+
+    &:hover {
+      background-color: rgba(rgb(0 0 0 / 68%), 1);
+    }
+
+    &:first-child {
+      padding: 7px !important;
+      width: 40px;
+
+      margin-left: 0;
+      background: rgb(90, 2, 131);
+      background: rgb(119, 0, 255);
+      background: -moz-radial-gradient(
+        circle,
+        rgba(119, 0, 255, 1) 0%,
+        rgba(114, 0, 244, 1) 35%,
+        rgba(70, 0, 147, 1) 100%
+      );
+      background: -webkit-radial-gradient(
+        circle,
+        rgba(119, 0, 255, 1) 0%,
+        rgba(114, 0, 244, 1) 35%,
+        rgba(70, 0, 147, 1) 100%
+      );
+      background: radial-gradient(
+        circle,
+        rgba(119, 0, 255, 1) 0%,
+        rgba(114, 0, 244, 1) 35%,
+        rgba(70, 0, 147, 1) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7700ff", endColorstr="#460093", GradientType=1);
+      color: $white;
+    }
+
+    span {
+      margin-left: 2px;
+    }
+  }
+
+  &__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgb(0 0 0 / 38%);
+  }
+
+  &__bottom-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      rgb(14 14 14 / 35%),
+      #000000
+    );
+  }
+}

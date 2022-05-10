@@ -1,0 +1,24 @@
+.Landing {
+  overflow: hidden;
+
+  section.content {
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+
+    .top-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 500px;
+      z-index: -1;
+      background: linear-gradient(
+        0deg,
+        transparent,
+        rgba(14, 14, 14, 0.35),
+        #000000
+      );
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './style/mixin';
+@import './style/variables';
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./assets/font/gilroy-light.woff");
+  src: url("./assets/font/gilroy-light.woff") format("woff")
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  background-color: $black;
+  color: $white;
+}
+
+input {
+  color: $white;
+}
+
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(71 71 71);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9e86ff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7160b3; 
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 1.5s ease-in-out infinite alternate-reverse both;
+	        animation: scale-up-center 1.5s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}

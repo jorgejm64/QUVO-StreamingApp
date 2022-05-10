@@ -1,0 +1,46 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.EmailSend {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__container {
+    position: fixed;
+    top: 50%;
+    max-width: 500px;
+    padding: 10px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      align-content: center;
+      border: 1px solid #382043;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: rgb(177 89 255 / 20%) 0px 7px 29px 0px;
+
+      span {
+        margin: 10px;
+        font-size: 15px;
+      }
+
+      a {
+        padding: 10px;
+        border: 1px solid #6c4493;
+        border-radius: 10px;
+        color: #fff;
+        background: #29083b;
+        cursor: pointer;
+      }
+    }
+  }
+}

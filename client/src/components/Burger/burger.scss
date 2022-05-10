@@ -1,0 +1,63 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.Burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 1.7rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 1.7rem;
+    height: 0.1rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  &.open {
+    div {
+      &:first-child {
+        transform: rotate(45deg);
+      }
+  
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        width: 1.7rem;
+      }
+    }
+  }
+  
+  &.closed {
+    div {
+      &:first-child {
+        transform: rotate(0);
+      }
+  
+      &:nth-child(2) {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &:nth-child(3) {
+        transform: rotate(0);
+        width: 50%;
+      }
+    }
+  }
+}

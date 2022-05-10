@@ -1,0 +1,43 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.homeSlide__content {
+  .swiper-free-mode > .swiper-wrapper {
+    animation-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+  div {
+    position: relative;
+    margin: 5px 0;
+
+    .noDrag__layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+    }
+  }
+
+  &--slide1 {
+    .swiper-slide {
+      text-align: center;
+      width: 210px;
+      border-radius: 10px;
+
+      @include mq("lg") {
+        width: 340px;
+      }
+      
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

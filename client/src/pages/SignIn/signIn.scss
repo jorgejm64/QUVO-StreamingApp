@@ -1,0 +1,315 @@
+@import "../../style/mixin";
+@import "../../style/variables";
+
+.wrapper {
+  background-color: #28003c;
+}
+
+
+.Auth {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+
+  &__logo {
+    display: none;
+
+    display: block;
+    width: 100%;
+    z-index: 2;
+    padding: 0.5em;
+    text-align: center;
+
+    &--img {
+      width: 100%;
+      max-width: 120px;
+    }
+  }
+
+  &__svg {
+    width: 600px;
+    height: 670px;
+    position: fixed;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+
+    svg {
+      fill: none;
+      stroke: #7700ff61;
+      stroke-miterlimit: 10;
+      stroke-width: 1px;
+      animation-name: girus;
+      animation-duration: 15s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes girus {
+      0% {
+        transform: rotate3d(1, 1, 1, 1deg);
+      }
+      100% {
+        transform: rotate3d(1, 1, 1, 359deg);
+      }
+      0% {
+        transform: rotate3d(1, 1, 1, 1deg);
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    max-width: 90%;
+    padding: 0;
+
+    @include mq(xs) {
+      padding: 2.25em 2em;
+    }
+
+    @include mq(sm) {
+      padding: 3.75em 3em;
+    }
+
+    @include mq(md) {
+      max-width: 600px;
+    }
+
+    &--title {
+      font-family: "Gilroy", sans-serif;
+      font-size: 2rem;
+      font-weight: lighter;
+      margin-bottom: 1em;
+
+      @include mq(xs) {
+        font-size: 2rem;
+      }
+    }
+
+    &--goBack a {
+      display: flex;
+      font-size: 16px;
+      margin-top: 20px;
+      height: 31px;
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      color: $white;
+      text-decoration: none;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &--toggleView {
+      margin-top: 20px;
+      display: inherit;
+      font-family: $main-font;
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 1.4;
+      color: $white;
+      text-align: center;
+
+      .toggler {
+        display: inline-block;
+        color: $link-color;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+        cursor: pointer;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          color: darken($link-color, 5);
+          transform: scale(0.95);
+        }
+
+        @include mq(md) {
+          font-size: 16px;
+        }
+      }
+
+      @include mq(md) {
+        font-size: 16px;
+      }
+    }
+
+    &--disclaimer {
+      display: inherit;
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 200;
+      color: $white;
+      text-align: center;
+      margin-top: 1.5em;
+    }
+
+    &--warning {
+      display: inherit;
+      font-family: $main-font;
+      font-size: 10px;
+      line-height: 1.4;
+      font-weight: 200;
+      color: red;
+      text-align: center;
+      margin-top: 1.5em;
+    }
+
+    &--errors {
+      display: inherit;
+      margin-top: 1.5em;
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 1.4;
+      color: $font-purple;
+      text-align: center;
+
+      @include mq(md) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.SignIn {
+  &__form {
+    &--inputwrp {
+      margin: 0.6em 0;
+
+      @include mq(xs) {
+        margin: 1em 0;
+      }
+    }
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      height: 45px;
+      box-shadow: none;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      padding: 1.2em 0.8em;
+      margin-top: 0.5em;
+      border-radius: 40px;
+      font-family: $main-font;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:nth-of-type(1) {
+        margin-top: 1.5em;
+
+        @include mq(xs) {
+          margin-top: 2em;
+        }
+      }
+
+      @include mq(xs) {
+        font-size: 15px;
+      }
+
+      &.button {
+        &__submit {
+          background-color: $light-purple;
+          color: $white;
+
+          &:hover {
+            background-color: darken($color: $light-purple, $amount: 8);
+            box-shadow: rgb(119 0 255 / 53%) 0px 0px 20px 7px;
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}
+
+.SignIn__form--inputwrp {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 2em;
+
+  label {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: darken($white, 20%);
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: darken($white, 40%);
+    font-size: 14px;
+  }
+
+  input:focus {
+    border-bottom: 1px solid $light-purple;
+  }
+
+  .input--error {
+    display: block;
+    color: $font-purple;
+    margin-top: 10px;
+  }
+
+  .inputField {
+    width: 100%;
+    padding: 1em 0;
+    background-color: transparent;
+    font-family: $main-font;
+    font-size: 15px;
+    color: $white;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid $white;
+    outline: none;
+    transition: all 0.2s ease-out;
+
+    &__label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+
+    &:disabled {
+      background-color: #1f1f1f;
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  }
+}
