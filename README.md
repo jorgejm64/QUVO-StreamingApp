@@ -11,7 +11,7 @@ Basic instalation: each root folder such as "Api, Admin & Client" use "npm insta
 
 Second step: need to configure the .env file into the Api folder. 
 
-Third step: Configure an admin user in mondoDB you can see the data scheme in the user folder into the Api tree.
+Third step: Configure an admin user in mondoDB you can see the data scheme in the user folder into the Api/models tree.
 
 Four step: Using this link https://drive.google.com/file/d/13qUYSMO-Him6f2er7ue9bCrW4oA-HN-W/view?usp=sharing you'll download two videos to test your app this. Unzip and then paste the data folder into the content folder into Api tree. Into the content folder you can see another folder named users.
 
