@@ -1,7 +1,7 @@
 # QUVO-StreamingApp
-QUVO es una aplicación de streaming de videos programada en React y Express.
+QUVO es una aplicación de streaming de videos como Netflix, Disney+ o HBO max programada en React y Express.
 
-QUVO is a video streaming app built on React and Express.
+QUVO is a video streaming app built such as Netflix, Disney+ or HBO max on React and Express.
 
 You'll need knowledge on React, Express, NodeJs, MongoDB & FFmpeg to make it functional.
 
