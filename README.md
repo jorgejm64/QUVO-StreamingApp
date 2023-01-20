@@ -34,4 +34,10 @@ Finally is everything is correct you'll have acces to all your Movies and Series
 ![alt text](https://github.com/jorgejm64/QUVO-StreamingApp/blob/main/images/quvoTV_3.png?raw=true)
 
 
+/*********************************************/
+
+[Im working on an API to convert any video file into MPEG-DASH .mpd file.]
+
+/*********************************************/
+
 Disclaimer this application is not fully functional in some aspect and you'll see some bugs
