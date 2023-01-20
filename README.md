@@ -32,3 +32,6 @@ Go to the client side and log in with the admin user that you have created, then
 Finally is everything is correct you'll have acces to all your Movies and Series that you have added
 
 ![alt text](https://github.com/jorgejm64/QUVO-StreamingApp/blob/main/images/quvoTV_3.png?raw=true)
+
+
+Disclaimer this application is not fully functional in some aspect and you'll see some bugs
